@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NEON ARCADE — Fichero de videojuegos</title>
+  <meta name="description" content="Fichero cyberpunk de videojuegos actuales: RPG, roguelikes, shooters y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="grid-floor" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <p class="eyebrow">// ARCHIVO_DE_JUEGOS.SYS</p>
+    <h1 class="glitch" data-text="NEON ARCADE">NEON ARCADE</h1>
+    <p class="tagline">Fichero de videojuegos actuales — cargando base de datos<span class="cursor">_</span></p>
+  </header>
+
+  <section class="controls">
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <input type="search" id="search" placeholder="Buscar en el fichero..." autocomplete="off">
+    </div>
+
+    <div class="filters" id="filters" role="group" aria-label="Filtrar por género">
+      <button class="filter-btn active" data-genre="all">Todos</button>
+      <button class="filter-btn" data-genre="rpg">RPG</button>
+      <button class="filter-btn" data-genre="accion">Acción</button>
+      <button class="filter-btn" data-genre="roguelike">Roguelike</button>
+      <button class="filter-btn" data-genre="estrategia">Cartas</button>
+      <button class="filter-btn" data-genre="plataformas">Plataformas</button>
+      <button class="filter-btn" data-genre="terror">Terror</button>
+    </div>
+
+    <button id="sortBtn" class="sort-btn" data-dir="desc">
+      <span>Valoración</span>
+      <svg viewBox="0 0 24 24" class="sort-arrow"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </section>
+
+  <p class="results-count" id="resultsCount" aria-live="polite"></p>
+
+  <main class="grid" id="grid">
+
+    <article class="card" data-genre="rpg" data-rating="5" data-title="Baldur's Gate 3">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g1" aria-hidden="true"><span class="art-label">BG3</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Baldur's Gate 3</h2>
+          <span class="year">2023</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> Larian Studios · <strong>Plataforma:</strong> PC, PS5, Xbox Series</p>
+        <p class="desc">RPG por turnos ambientado en los Reinos Olvidados, con decisiones que reescriben la partida y un elenco memorable.</p>
+        <div class="tags">
+          <span class="tag">RPG táctico</span>
+          <span class="tag">Historia ramificada</span>
+        </div>
+        <div class="rating" data-rating="5" aria-label="Valoración: 5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="accion" data-rating="4.5" data-title="Cyberpunk 2077: Phantom Liberty">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g2" aria-hidden="true"><span class="art-label">CP77</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Cyberpunk 2077: Phantom Liberty</h2>
+          <span class="year">2023</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> CD Projekt Red · <strong>Plataforma:</strong> PC, PS5, Xbox Series</p>
+        <p class="desc">La expansión que redimió Night City: espionaje, neón y una ciudad más viva que nunca.</p>
+        <div class="tags">
+          <span class="tag">Mundo abierto</span>
+          <span class="tag">Ciencia ficción</span>
+        </div>
+        <div class="rating" data-rating="4.5" aria-label="Valoración: 4.5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="accion" data-rating="4.5" data-title="Helldivers 2">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g3" aria-hidden="true"><span class="art-label">HD2</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Helldivers 2</h2>
+          <span class="year">2024</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> Arrowhead Game Studios · <strong>Plataforma:</strong> PC, PS5</p>
+        <p class="desc">Democracia gestionada a tiros: shooter cooperativo en tercera persona contra hordas alienígenas.</p>
+        <div class="tags">
+          <span class="tag">Cooperativo</span>
+          <span class="tag">Shooter táctico</span>
+        </div>
+        <div class="rating" data-rating="4.5" aria-label="Valoración: 4.5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="roguelike" data-rating="4.5" data-title="Hades II">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g4" aria-hidden="true"><span class="art-label">HD2·</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Hades II</h2>
+          <span class="year">2024</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> Supergiant Games · <strong>Plataforma:</strong> PC</p>
+        <p class="desc">La secuela del aclamado roguelike, ahora en la piel de Melinoë, princesa del Inframundo.</p>
+        <div class="tags">
+          <span class="tag">Roguelike</span>
+          <span class="tag">Mitología</span>
+        </div>
+        <div class="rating" data-rating="4.5" aria-label="Valoración: 4.5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="rpg" data-rating="5" data-title="Elden Ring: Shadow of the Erdtree">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g5" aria-hidden="true"><span class="art-label">ER</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Elden Ring: Shadow of the Erdtree</h2>
+          <span class="year">2024</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> FromSoftware · <strong>Plataforma:</strong> PC, PS5, Xbox Series</p>
+        <p class="desc">La expansión que amplía el Interregno con la Tierra de las Sombras y sus nuevos horrores.</p>
+        <div class="tags">
+          <span class="tag">Souls-like</span>
+          <span class="tag">Mundo abierto</span>
+        </div>
+        <div class="rating" data-rating="5" aria-label="Valoración: 5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="accion" data-rating="4.5" data-title="Black Myth: Wukong">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g6" aria-hidden="true"><span class="art-label">BMW</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Black Myth: Wukong</h2>
+          <span class="year">2024</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> Game Science · <strong>Plataforma:</strong> PC, PS5</p>
+        <p class="desc">Souls-like inspirado en "Viaje al Oeste", con combates espectaculares y estética wuxia.</p>
+        <div class="tags">
+          <span class="tag">Mitología china</span>
+          <span class="tag">Acción</span>
+        </div>
+        <div class="rating" data-rating="4.5" aria-label="Valoración: 4.5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="estrategia" data-rating="5" data-title="Balatro">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g7" aria-hidden="true"><span class="art-label">BLT</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Balatro</h2>
+          <span class="year">2024</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> LocalThunk · <strong>Plataforma:</strong> PC, Switch, móvil</p>
+        <p class="desc">Póker convertido en roguelike de cartas adictivo: el fenómeno indie sorpresa del año.</p>
+        <div class="tags">
+          <span class="tag">Roguelike de cartas</span>
+          <span class="tag">Indie</span>
+        </div>
+        <div class="rating" data-rating="5" aria-label="Valoración: 5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="plataformas" data-rating="5" data-title="Astro Bot">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g8" aria-hidden="true"><span class="art-label">AB</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Astro Bot</h2>
+          <span class="year">2024</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> Team Asobi · <strong>Plataforma:</strong> PS5</p>
+        <p class="desc">Una carta de amor a PlayStation hecha plataformas 3D, diseñada al detalle para el DualSense.</p>
+        <div class="tags">
+          <span class="tag">Plataformas 3D</span>
+          <span class="tag">Exclusivo PS5</span>
+        </div>
+        <div class="rating" data-rating="5" aria-label="Valoración: 5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+    <article class="card" data-genre="terror" data-rating="4.5" data-title="Silent Hill 2">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div class="art g9" aria-hidden="true"><span class="art-label">SH2</span></div>
+      <div class="content">
+        <div class="card-top">
+          <h2 class="title">Silent Hill 2</h2>
+          <span class="year">2024</span>
+        </div>
+        <p class="meta"><strong>Estudio:</strong> Bloober Team · <strong>Plataforma:</strong> PC, PS5</p>
+        <p class="desc">El regreso al terror psicológico de Konami: un remake fiel al clásico original de 2001.</p>
+        <div class="tags">
+          <span class="tag">Survival horror</span>
+          <span class="tag">Remake</span>
+        </div>
+        <div class="rating" data-rating="4.5" aria-label="Valoración: 4.5 de 5 estrellas"></div>
+      </div>
+    </article>
+
+  </main>
+
+  <p class="no-results" id="noResults" hidden>NO_SE_ENCONTRARON_COINCIDENCIAS &gt; revisa tu búsqueda_</p>
+
+  <footer class="site-footer">
+    <p>NEON ARCADE // fichero estático de videojuegos reales, con fines educativos</p>
+    <p class="footer-sub">HTML · CSS · JavaScript — sin frameworks, sin backend</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
