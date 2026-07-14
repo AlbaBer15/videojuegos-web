@@ -1,6 +1,6 @@
-# NEON ARCADE — Fichero de videojuegos (cyberpunk)
+# NEON ARCADE — Fichero de videojuegos
 
-Sitio web estático con fichas de videojuegos actuales reales (Baldur's Gate 3, Cyberpunk 2077: Phantom Liberty, Helldivers 2, Hades II, Elden Ring: Shadow of the Erdtree, Black Myth: Wukong, Balatro, Astro Bot, Silent Hill 2), con estética cyberpunk en rosa y neones: glitch, scanlines, cuadrícula HUD y tarjetas con brillo neón.
+Sitio web estático con fichas de videojuegos actuales reales (Baldur's Gate 3, Cyberpunk 2077: Phantom Liberty, Helldivers 2, Hades II, Elden Ring: Shadow of the Erdtree, Black Myth: Wukong, Balatro, Astro Bot, Silent Hill 2), con estética en rosa y neones: glitch, scanlines, cuadrícula HUD y tarjetas con brillo neón.
 
 Archivos principales:
 - `index.html` — estructura y contenido de las fichas
